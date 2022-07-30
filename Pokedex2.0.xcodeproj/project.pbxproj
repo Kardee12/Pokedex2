@@ -11,6 +11,14 @@
 		8C0F0BCF2890B17400F0CD7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F0BCE2890B17400F0CD7E /* ContentView.swift */; };
 		8C0F0BD12890B17600F0CD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C0F0BD02890B17600F0CD7E /* Assets.xcassets */; };
 		8C0F0BD42890B17600F0CD7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C0F0BD32890B17600F0CD7E /* Preview Assets.xcassets */; };
+		8C0F0C0F2893383B00F0CD7E /* NewsCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F0C0E2893383B00F0CD7E /* NewsCapsule.swift */; };
+		8C0F0C2A28933CE100F0CD7E /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F0C2928933CE100F0CD7E /* NewsListView.swift */; };
+		8C0F0C3028933E6600F0CD7E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F0C2F28933E6600F0CD7E /* Constant.swift */; };
+		8C5AF24B2893DCE5009934DA /* PokedexCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF24A2893DCE5009934DA /* PokedexCapsule.swift */; };
+		8C5AF25328946971009934DA /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF25228946971009934DA /* ApiError.swift */; };
+		8C5AF258289474A5009934DA /* NewsWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF257289474A5009934DA /* NewsWebService.swift */; };
+		8C5AF25A28948E01009934DA /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF25928948E01009934DA /* Article.swift */; };
+		8C5AF25C2894DB40009934DA /* NewsListDetaiLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF25B2894DB40009934DA /* NewsListDetaiLView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		8C0F0BCE2890B17400F0CD7E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8C0F0BD02890B17600F0CD7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C0F0BD32890B17600F0CD7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8C0F0C0E2893383B00F0CD7E /* NewsCapsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCapsule.swift; sourceTree = "<group>"; };
+		8C0F0C2928933CE100F0CD7E /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
+		8C0F0C2F28933E6600F0CD7E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		8C5AF24A2893DCE5009934DA /* PokedexCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexCapsule.swift; sourceTree = "<group>"; };
+		8C5AF25228946971009934DA /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		8C5AF257289474A5009934DA /* NewsWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWebService.swift; sourceTree = "<group>"; };
+		8C5AF25928948E01009934DA /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		8C5AF25B2894DB40009934DA /* NewsListDetaiLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListDetaiLView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +67,11 @@
 		8C0F0BCB2890B17400F0CD7E /* Pokedex2.0 */ = {
 			isa = PBXGroup;
 			children = (
-				8C0F0BCC2890B17400F0CD7E /* Pokedex2_0App.swift */,
-				8C0F0BCE2890B17400F0CD7E /* ContentView.swift */,
+				8C0F0C3128933F3500F0CD7E /* API */,
+				8C0F0C2E28933E5700F0CD7E /* Constants */,
+				8C0F0C2B28933D9000F0CD7E /* Model */,
+				8C0F0C0D2893381000F0CD7E /* View */,
+				8C0F0C0C289332CF00F0CD7E /* App */,
 				8C0F0BD02890B17600F0CD7E /* Assets.xcassets */,
 				8C0F0BD22890B17600F0CD7E /* Preview Content */,
 			);
@@ -65,6 +84,59 @@
 				8C0F0BD32890B17600F0CD7E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8C0F0C0C289332CF00F0CD7E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8C0F0BCC2890B17400F0CD7E /* Pokedex2_0App.swift */,
+				8C0F0BCE2890B17400F0CD7E /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8C0F0C0D2893381000F0CD7E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C0F0C0E2893383B00F0CD7E /* NewsCapsule.swift */,
+				8C0F0C2928933CE100F0CD7E /* NewsListView.swift */,
+				8C5AF24A2893DCE5009934DA /* PokedexCapsule.swift */,
+				8C5AF25B2894DB40009934DA /* NewsListDetaiLView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C0F0C2B28933D9000F0CD7E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C5AF25928948E01009934DA /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C0F0C2E28933E5700F0CD7E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8C0F0C2F28933E6600F0CD7E /* Constant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8C0F0C3128933F3500F0CD7E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8C5AF25428946A2A009934DA /* NewsSerivce */,
+				8C5AF25228946971009934DA /* ApiError.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8C5AF25428946A2A009934DA /* NewsSerivce */ = {
+			isa = PBXGroup;
+			children = (
+				8C5AF257289474A5009934DA /* NewsWebService.swift */,
+			);
+			path = NewsSerivce;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C5AF24B2893DCE5009934DA /* PokedexCapsule.swift in Sources */,
+				8C5AF258289474A5009934DA /* NewsWebService.swift in Sources */,
+				8C5AF25A28948E01009934DA /* Article.swift in Sources */,
+				8C0F0C0F2893383B00F0CD7E /* NewsCapsule.swift in Sources */,
+				8C0F0C2A28933CE100F0CD7E /* NewsListView.swift in Sources */,
 				8C0F0BCF2890B17400F0CD7E /* ContentView.swift in Sources */,
+				8C5AF25328946971009934DA /* ApiError.swift in Sources */,
 				8C0F0BCD2890B17400F0CD7E /* Pokedex2_0App.swift in Sources */,
+				8C5AF25C2894DB40009934DA /* NewsListDetaiLView.swift in Sources */,
+				8C0F0C3028933E6600F0CD7E /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

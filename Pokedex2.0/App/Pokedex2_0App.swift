@@ -11,7 +11,7 @@ import SwiftUI
 struct Pokedex2_0App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(NewsWebService())
         }
     }
 }
