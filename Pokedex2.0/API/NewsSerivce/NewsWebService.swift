@@ -12,7 +12,7 @@ class NewsWebService: ObservableObject{
     @Published var news: NewsResponse?
     
     func getNews() async throws {
-            let (data, _) = try await URLSession.shared.data(from: Constants.url.pokeNews)
+        let (data, _) = try await URLSession.shared.data(from: Constants.url.pokeNews)
             Task{@MainActor in
                 self.news = try JSONDecoder().decode(NewsResponse.self, from: data)
             }

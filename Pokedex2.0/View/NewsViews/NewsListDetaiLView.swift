@@ -7,18 +7,36 @@
 
 import SwiftUI
 
+extension Image{
+    func imageModifier() -> some View{
+        self
+            .resizable()
+            .scaledToFill()
+            .frame( width: 50, height: 50)
+            .cornerRadius(9)
+    }
+    func iconModifer() -> some View{
+        self
+            .imageModifier()
+            .frame( width: 50, height: 50)
+            .cornerRadius(9)
+            .foregroundColor(.red)
+    }
+}
+
 struct NewsListDetaiLView: View {
-    var img: String
+    var img: URL
     var title: String
     var src: String
     var body: some View {
         
         HStack{
-            Image("yak0")
-                .resizable()
-                .scaledToFill()
-                .frame( width: 50, height: 50)
-                .cornerRadius(9)
+            
+            AsyncImage(url: img){ image in
+                image.imageModifier()
+            } placeholder: {
+                Image(systemName: "pokeball").iconModifer()
+            }
             VStack(alignment: .center, spacing: 16, content:{
                 
                 //Article Title

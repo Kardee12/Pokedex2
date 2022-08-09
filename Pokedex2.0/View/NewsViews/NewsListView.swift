@@ -13,7 +13,13 @@ struct NewsListView: View {
     
     var body: some View {
         List(newsWebService.news?.articles ?? []){ article in  // <-- here
-            NewsListDetaiLView(img: "", title: article.title, src: article.source.name)
+            NavigationLink(destination: WebView(url: article.url)){
+                NewsListDetaiLView(img: article.urlToImage!, title: article.title, src: article.source.name)
+                    .onAppear{
+                        print(article.title)
+                    }
+            }
+            
         }
         .task {
             do{
